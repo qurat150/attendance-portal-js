@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #000f38;
+  background-color: #0f171e;
+  /* color: white; */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #001550;
+  background-color: #1a242f;
+  padding: 0 15px;
+  color: #fff;
+}
+
+.navbar button {
+  padding: 10px;
+  background-color: #0f171e;
+  color: white;
+  margin-left: 10px;
+  border: none;
+  width: 100px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dialog {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000;
+  height: 500px;
+  overflow: scroll;
+  min-width: 40%;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 8px 0px 8px 0px;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="button"],
+#selectClassToTransferStudent {
+  background-color: #0f171e;
+  color: #fff;
+  padding: 8px;
+  font-size: 18px;
+  border: none;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #1a242f;
+  display: inline-block;
+  margin: 20px 0px 20px 20px;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}

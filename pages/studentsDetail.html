@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card UI</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        #idCard {
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            width: 300px;
+        }
+
+        #rollNumberInput {
+            margin: 10px;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #studentDetails {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        #studentDetails p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="idCard">
+    <h2>ID Card</h2>
+    <label for="rollNumberInput">Enter Roll Number:</label>
+    <input type="text" id="rollNumberInput" placeholder="E.g., 12345">
+
+    <div id="studentDetails">
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Class:</strong> Class 10A</p>
+        <p><strong>Roll Number:</strong> 12345</p>
+        <!-- Add more student details as needed -->
+    </div>
+</div>
+
+</body>
+</html>

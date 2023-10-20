@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="../styles/authStyles.css" />
+  </head>
+  <body>
+    <div class="signup-container">
+      <form onsubmit="handleSubmit(event)" class="signup-form">
+        <h2>Signup</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+
+        <div class="login-text">
+          Already have an account? <a href="../pages/login.html">Login</a>
+        </div>
+
+        <button type="submit" id="signup-btn">Signup</button>
+        <button type="submit" id="logout-btn">logout</button>
+      </form>
+    </div>
+
+    <script src="../config/config.js" type="module"></script>
+    <script src="../js/utils/utils.js"></script>
+    <script src="../js/auth/adminCheck.js" type="module"></script>
+    <script src="../js/auth/signup/index.js" type="module"></script>
+  </body>
+</html>

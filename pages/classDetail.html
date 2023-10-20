@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Management System</title>
+    <link rel="stylesheet" href="../styles/adminDashboard.css" />
+    <style>
+      /* Hide the option box initially */
+      #optionBox {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        z-index: 1;
+      }
+
+      /* Style the button */
+      #openButton {
+        padding: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-left">
+        <h2 style="cursor: pointer" onclick="navigateToHomeScreen()">
+          Class Management
+        </h2>
+      </div>
+      <div class="navbar-right">
+        <button id="addClassBtn" onclick="openDialog()">Add Student</button>
+        <button id="logout-btn">logout</button>
+      </div>
+    </div>
+
+    <div id="studentCards">
+      <div class="card">
+        <h2>Dummy Student</h2>
+        <p>Name: John Doe</p>
+        <p>Father Name: Mr. Doe</p>
+        <p>Roll Number: 12345</p>
+        <p>Contact Number: 123-456-7890</p>
+        <p>CNIC Number: 1234567890123</p>
+        <p>Course Name: Computer Science</p>
+        <button type="button" id="openButton">transfer</button>
+        <select id="fruitSelect">
+          <option value="apple">Apple</option>
+          <option value="mango">Mango</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="addStudentDialog" class="dialog">
+      <span class="close" onclick="closeDialog()">&times;</span>
+      <h2>Add Student Details</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required />
+
+        <label for="rollNumber">Roll Number:</label>
+        <input type="text" id="rollNumber" name="rollNumber" required />
+
+        <label for="picture">Picture:</label>
+        <input type="file" id="picture" name="picture" accept="image/*" />
+
+        <label for="courseName">Course Name:</label>
+        <input type="text" id="courseName" name="courseName" required />
+
+        <button type="button" id="addStudentBtn">Add Student</button>
+      </form>
+    </div>
+    <script>
+      function openDialog() {
+        document.getElementById("addStudentDialog").style.display = "block";
+      }
+
+      function closeDialog() {
+        document.getElementById("addStudentDialog").style.display = "none";
+      }
+      const navigateToHomeScreen = () => {
+        const adminDashboardPath = "/pages/adminDashboard.html";
+        if (window.location.pathname !== adminDashboardPath)
+          window.location = "../../pages/adminDashboard.html";
+      };
+    </script>
+    <script>
+      document
+        .getElementById("openButton")
+        .addEventListener("click", function () {
+          // Toggle the visibility of the option box
+          var optionBox = document.getElementById("optionBox");
+          optionBox.style.display =
+            optionBox.style.display === "none" ? "block" : "none";
+        });
+    </script>
+
+    <script src="../config/config.js" type="module"></script>
+    <script src="../js/admin/adminHandleStudents.js" type="module"></script>
+  </body>
+</html>

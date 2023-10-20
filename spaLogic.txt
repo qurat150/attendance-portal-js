@@ -1,0 +1,50 @@
+// function processAjaxData(response, urlPath) {
+//   document.getElementById("main").innerHTML = response.html;
+//   document.title = response.pageTitle;
+//   window.history.pushState(
+//     { html: response.html, pageTitle: response.pageTitle },
+//     "",
+//     urlPath
+//   );
+//   window.onpopstate = function (e) {
+//     if (e.state) {
+//       document.getElementById("main").innerHTML = e.state.html;
+//       document.title = e.state.pageTitle;
+//     }
+//   };
+// }
+
+// const newPath = "../../pages/classDetail.html?id=" + classId;
+// const response = await fetch(newPath);
+// const html = await response.text();
+// const parser = new DOMParser();
+// const doc = parser.parseFromString(html, "text/html");
+// const fetchedScripts = doc.body.querySelectorAll("script[type=module]");
+// fetchedScripts.forEach((script) => {
+//   const clonedScript = script.cloneNode(true);
+//   document.body.append(clonedScript);
+//   console.log(clonedScript);
+//   script.remove();
+// });
+// const bodyStr = doc.body.outerHTML;
+
+// processAjaxData({ html: bodyStr, pageTitle: doc.title }, newPath);
+
+
+
+
+Condition base
+
+
+        // const conditionQuery = query(
+    //   classesRef,
+    //   orderByChild("courseName"),
+    //   equalTo(studentInfo.courseName)
+    // );
+    // console.log(conditionQuery);
+
+    // if (conditionQuery) {
+    //   await push(studentsRef, studentInfo);
+    // } else {
+    //   alert("That course's class is not available!");
+    // }
