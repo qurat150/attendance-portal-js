@@ -48,3 +48,17 @@ Condition base
     // } else {
     //   alert("That course's class is not available!");
     // }
+
+
+      let res = showStudentsInClass.filter((hui) => {
+    if (document.getElementById("email").value === hui.email)
+      alert("the email is already in use");
+    else console.log("ok");
+  });
+  console.log(res);
+
+
+  studentDetail mein request for admin wala function smhna hai
+
+  problems
+adminhandle classes mein showclasses mein classes 4 dafa display

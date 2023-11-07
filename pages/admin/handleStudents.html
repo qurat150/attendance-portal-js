@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Class Management System</title>
-    <link rel="stylesheet" href="../styles/adminDashboard.css" />
+    <link rel="stylesheet" href="../../styles/adminDashboard.css" />
     <style>
       /* Hide the option box initially */
       #optionBox {
@@ -28,30 +28,18 @@
     <div class="navbar">
       <div class="navbar-left">
         <h2 style="cursor: pointer" onclick="navigateToHomeScreen()">
-          Class Management
+          Students Management
         </h2>
       </div>
       <div class="navbar-right">
         <button id="addClassBtn" onclick="openDialog()">Add Student</button>
+        <button id="approve-requests">Approve Requests</button>
         <button id="logout-btn">logout</button>
       </div>
     </div>
 
     <div id="studentCards">
-      <div class="card">
-        <h2>Dummy Student</h2>
-        <p>Name: John Doe</p>
-        <p>Father Name: Mr. Doe</p>
-        <p>Roll Number: 12345</p>
-        <p>Contact Number: 123-456-7890</p>
-        <p>CNIC Number: 1234567890123</p>
-        <p>Course Name: Computer Science</p>
-        <button type="button" id="openButton">transfer</button>
-        <select id="fruitSelect">
-          <option value="apple">Apple</option>
-          <option value="mango">Mango</option>
-        </select>
-      </div>
+      <p style="color: white; text-align: center">Loading..</p>
     </div>
 
     <div id="addStudentDialog" class="dialog">
@@ -85,23 +73,24 @@
         document.getElementById("addStudentDialog").style.display = "none";
       }
       const navigateToHomeScreen = () => {
-        const adminDashboardPath = "/pages/adminDashboard.html";
+        const adminDashboardPath = "/pages/admin/handleClasses.html";
         if (window.location.pathname !== adminDashboardPath)
-          window.location = "../../pages/adminDashboard.html";
+          window.location = "../../pages/admin/handleClasses.html";
       };
     </script>
     <script>
-      document
-        .getElementById("openButton")
-        .addEventListener("click", function () {
+      let openDialogBtn = document.getElementById("openButton");
+      if (openDialogBtn) {
+        openDialogBtn.addEventListener("click", function () {
           // Toggle the visibility of the option box
           var optionBox = document.getElementById("optionBox");
           optionBox.style.display =
             optionBox.style.display === "none" ? "block" : "none";
         });
+      }
     </script>
 
-    <script src="../config/config.js" type="module"></script>
-    <script src="../js/admin/adminHandleStudents.js" type="module"></script>
+    <script src="../../config/config.js" type="module"></script>
+    <script src="../../js/admin/handleStudents.js" type="module"></script>
   </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../../styles/authStyles.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <form onsubmit="handleSubmit(event)" class="login-form">
+        <h2>Login</h2>
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          autocomplete="email"
+          required
+        />
+
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          autocomplete="current-password"
+        />
+
+        <div class="register-text">
+          Don't have an account? <a href="../pages/auth/signup.html">Register</a>
+        </div>
+
+        <button type="submit" id="login-btn">Login</button>
+      </form>
+    </div>
+    <script src="../../config/config.js" type="module"></script>
+    <script src="../../js/utils/utils.js"></script>
+    <script src="../../js/auth/adminCheck.js" type="module"></script>
+    <script src="../../js/auth/login/index.js" type="module"></script>
+  </body>
+</html>

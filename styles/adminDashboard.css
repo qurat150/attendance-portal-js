@@ -22,7 +22,7 @@ body {
   color: white;
   margin-left: 10px;
   border: none;
-  width: 100px;
+  min-width: 100px;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -69,7 +69,7 @@ input {
 }
 
 button[type="button"],
-#selectClassToTransferStudent {
+#selectedClassToTransferStudent {
   background-color: #0f171e;
   color: #fff;
   padding: 8px;
@@ -81,7 +81,7 @@ button[type="button"],
 }
 
 .card {
-  max-width: 400px;
+  max-width: 300px;
   padding: 20px;
   background-color: #1a242f;
   display: inline-block;

@@ -2,10 +2,10 @@ import { getAuth, signInWithEmailAndPassword } from "../../common/index.js";
 
 const auth = getAuth();
 
-const login = () => {
+const login = async () => {
   let email = document.getElementById("email");
   let password = document.getElementById("password");
-  signInWithEmailAndPassword(auth, email.value, password.value)
+  await signInWithEmailAndPassword(auth, email.value, password.value)
     .then((resolve) => {
       console.log("successfully Login", resolve);
     })

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Management System</title>
+    <link rel="stylesheet" href="../../styles/adminDashboard.css" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-left">
+        <h2 style="cursor: pointer">User Dashboard</h2>
+      </div>
+      <div class="navbar-right">
+        <button id="logout-btn">logout</button>
+      </div>
+    </div>
+
+    <div id="cards" style="cursor: default">
+      <div class="card" style="cursor: default">
+        <h2>Dummy Student</h2>
+        <p>Name: John Doe</p>
+        <p>Father Name: Mr. Doe</p>
+        <p>Roll Number: 12345</p>
+        <p>Contact Number: 123-456-7890</p>
+        <button type="button" id="openButton" style="margin-bottom: 5px">
+          Present
+        </button>
+        <button type="button" id="openButton">Request for Leave</button>
+      </div>
+    </div>
+
+    <script>
+      const navigateToHomeScreen = () => {
+        const adminDashboardPath = "/pages/admin/handleClasses.html";
+        if (window.location.pathname !== adminDashboardPath)
+          window.location = "../../pages/admin/handleClasses.html";
+      };
+    </script>
+
+    <script src="../../config/config.js" type="module"></script>
+    <script src="../../js/students/studentDashbaord.js" type="module"></script>
+  </body>
+</html>

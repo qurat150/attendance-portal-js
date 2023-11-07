@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Management System</title>
+    <link rel="stylesheet" href="../../styles/adminDashboard.css" />
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-left">
+        <h2>Requests!</h2>
+      </div>
+      <div class="navbar-right">
+        <button id="logout-btn">logout</button>
+      </div>
+    </div>
+
+    <div id="requestCards" style="cursor: default">
+      <p id="ifNoRequest" style="color: white; text-align: center">Loading..</p>
+    </div>
+
+    <script src="../../config/config.js" type="module"></script>
+    <script src="../../js/admin/handleRequests.js" type="module"></script>
+  </body>
+</html>

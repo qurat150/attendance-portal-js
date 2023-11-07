@@ -11,8 +11,8 @@ const database = getDatabase();
 
 const isRolePathHaveAccess = (role) => {
   const rolePaths = {
-    admin: ["/pages/adminDashboard.html", "/pages/classDetail.html"],
-    user: ["/pages/user.html"], // temp for now
+    admin: ["/pages/admin/handleClasses.html", "/pages/admin/handleStudents.html"],
+    user: ["/pages/students/dashboard.html"], // temp for now
   };
 
   const currentRolePaths = rolePaths[role] || [];
@@ -23,6 +23,7 @@ const isRolePathHaveAccess = (role) => {
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
+    console.log("user loggedIn");
     const userRef = ref(database, "users/" + user.uid);
     onValue(userRef, (snapshot) => {
       const data = snapshot.val();
@@ -30,11 +31,12 @@ onAuthStateChanged(auth, (user) => {
       if (data.isAdmin) {
         const { isActive, entry } = isRolePathHaveAccess("admin");
         if (!isActive) window.location = entry;
-      } else {
-        // window.location = "../../../pages/login.html";
-        let pathName = "/pages/studentsDetail.html";
-        if (window.location.pathname !== pathName)
-          window.location = "../../../pages/studentsDetail.html";
+      }
+      if (!data.isAdmin) {
+        const { isActive, entry } = isRolePathHaveAccess("user");
+        setTimeout(() => {
+          if (!isActive) window.location = entry;
+        }, 2000);
       }
     });
   } else {
